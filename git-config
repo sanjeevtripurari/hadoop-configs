@@ -1,0 +1,15 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	url = ssh://git@github.com:sanjeevtripurari/sanjeevtripurari/hadoop.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "trunk"]
+	remote = origin
+	merge = refs/heads/trunk
+[remote "upstream"]
+	url = ssh://git@github.com:sanjeevtripurari/apache/hadoop.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*

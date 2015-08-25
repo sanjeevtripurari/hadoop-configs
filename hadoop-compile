@@ -1,0 +1,11 @@
+cd Projects/hadoop/
+
+cat .git/config
+
+git pull upstream trunk
+git push -u
+
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+mvn package -Pdist,native -Dmaven.javadoc.skip=true  -DskipTests -Dtar
+
+# target: hadoop-dist/target/
