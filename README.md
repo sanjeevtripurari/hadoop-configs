@@ -40,9 +40,9 @@ Maintaining my hadoop configs for open source apache hadoop compilation
 ### local directories
 > mkdir -p /hadoop/{hdfs,yarn}
 > 
-> mkdir -p /hadoop/hdfs/{name,dfs}
+> mkdir -p /hadoop/hdfs/{name,data}
 > 
-> mkdir -p /hadoop/hdfs/dfs/d{1,2,3}
+> mkdir -p /hadoop/hdfs/data/d{1,2,3}
 > 
 > mkdir -p /hadoop/yarn/{rmstore,local,logs}
 > 
@@ -55,4 +55,10 @@ Maintaining my hadoop configs for open source apache hadoop compilation
 > NN http://192.168.156.10:50070/dfshealth.html
 > 
 > RM http://192.168.156.10:8088/cluster
-
+>
+> Run Sample
+> 
+> hadoop jar $HADOOP_PREFIX/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.0.0-SNAPSHOT.jar pi 500 40
+> 
+> Check if scheduled
+> http://192.168.156.10:8088/cluster/scheduler
