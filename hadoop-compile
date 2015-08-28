@@ -5,7 +5,30 @@ cat .git/config
 git pull upstream trunk
 git push -u
 
-JAVA_HOME=/usr/lib/jvm/java-8-oracle
-mvn package -Pdist,native -Dmaven.javadoc.skip=true  -DskipTests -Dtar
+### Dev env setup
+# sudo add-apt-repository ppa:webupd8team/java
+# sudo apt-get update
+# sudo apt-get upgrade
+# sudo apt-get install build-essential git maven subversion
+# sudo apt-get install g++ autoconf automake libtool cmake zlib1g-dev pkg-config libssl-dev protobuf-compiler
+
+### Java Install
+# echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+# sudo apt-get install oracle-java8-installer
+# sudo apt-get install oracle-java8-set-default
+# sudo update-java-alternatives -s java-8-oracle
+
+### Protobuf
+# wget https://github.com/google/protobuf/archive/v2.5.0.tar.gz
+# tar -tvzf v2.5.0.tar.gz
+# cd protobuf-2.5.0/
+# ./autogen.sh
+# ./configure --prefix=/opt/protobuf-2.5.0
+#  make
+# sudo make install
+# cd /opt/protobuf-2.5.0/
+# sudo ldconfig -v /opt/protobuf-2.5.0/lib |grep -i pro
+# export PATH=/opt/protobuf-2.5.0/bin:$PATH
+# mvn clean package -Pdist,native -Dmaven.javadoc.skip=true  -DskipTests -Dtar
 
 # target: hadoop-dist/target/

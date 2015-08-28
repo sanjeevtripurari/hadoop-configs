@@ -28,7 +28,7 @@ Maintaining my hadoop configs for open source apache hadoop compilation
 > mapred --daemon start historyserver
 
 
-### directories
+### hdfs directories
 > hadoop fs -mkdir /hadoop/logs
 > 
 > hadoop fs -mkdir /user/sanjeevt
@@ -36,6 +36,20 @@ Maintaining my hadoop configs for open source apache hadoop compilation
 > hadoop fs -mkdir -p /tmp
 > 
 > hdfs dfs -chmod 1777  /tmp
+
+### local directories
+> mkdir -p /hadoop/{hdfs,yarn}
+> 
+> mkdir -p /hadoop/hdfs/{name,dfs}
+> 
+> mkdir -p /hadoop/hdfs/dfs/d{1,2,3}
+> 
+> mkdir -p /hadoop/yarn/{rmstore,local,logs}
+> 
+> mkdir -p /hadoop/yarn/local/l{1,2,3}
+> 
+> mkdir -p /hadoop/yarn/logs/l{1,2,3}
+> 
 
 ### acess
 > NN http://192.168.156.10:50070/dfshealth.html
