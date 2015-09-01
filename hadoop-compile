@@ -2,6 +2,11 @@ cd Projects/hadoop/
 
 cat .git/config
 
+# [remote "origin"]
+#	url = ssh://git@github.com/sanjeevtripurari/hadoop.git
+# [remote "upstream"]
+#	url = ssh://git@github.com/apache/hadoop.git
+
 git pull upstream trunk
 git push -u
 
