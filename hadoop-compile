@@ -15,7 +15,7 @@ git push -u
 # sudo apt-get update
 # sudo apt-get upgrade
 # sudo apt-get install build-essential git maven subversion
-# sudo apt-get install g++ autoconf automake libtool cmake zlib1g-dev pkg-config libssl-dev protobuf-compiler
+# sudo apt-get install g++ autoconf automake libtool cmake zlib1g-dev pkg-config libssl-dev protobuf-compiler bats  
 
 ### Java Install
 # echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
